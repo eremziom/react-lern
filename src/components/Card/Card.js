@@ -1,17 +1,17 @@
 import React from 'react';
-import styles from './Column.scss';
+import styles from './Card.scss';
 import PropTypes from 'prop-types';
 
-const Column = argument => (
+const Card = argument => (
 
     <section className={styles.component}>
         <h3 className={styles.title}>{argument.title}</h3>
     </section>
 );
 
-Column.propTypes = {
-    title: PropTypes.string,
+Card.propTypes = {
+    card: PropTypes.array,
 }
 
 
-export default Column;
+export default Card;
