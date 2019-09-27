@@ -10,7 +10,7 @@ const Card = argument => (
 );
 
 Card.propTypes = {
-    card: PropTypes.array,
+    cards: PropTypes.array,
 }
 
 
