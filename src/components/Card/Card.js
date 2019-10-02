@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 
 const Card = argument => (
 
-    <section className={styles.component}>
-        <h3 className={styles.title}>{argument.title}</h3>
-    </section>
+  <section className={styles.component}>
+    <h3 className={styles.title}>{argument.title}</h3>
+  </section>
 );
 
 Card.propTypes = {
-    cards: PropTypes.array,
-}
+  cards: PropTypes.array,
+};
 
 
 export default Card;
