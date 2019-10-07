@@ -8,7 +8,7 @@ const mapStateToProps = (state, props) => ({
 
 const mapDispatchToProps = (dispatch, props) => ({
   addColumn: title => dispatch(createAction_addColumn({
-    listId: props.id,
+    listId: props.id,  // <-- This object is Payload!!
     title,
   })),
 });
