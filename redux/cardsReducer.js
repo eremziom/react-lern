@@ -14,7 +14,7 @@ export const ADD_CARD = createActionName('ADD_CARD');
 export const createAction_addCard = payload => ({ payload, type: ADD_CARD });
 
 // reducer
-export default function reducer(state = [], action = {}) {
+export default function cardReducer(state = [], action = {}) {
   switch (action.type) {
     case ADD_CARD:
       return [...state, { ...action.payload, id: shortid.generate() }];
