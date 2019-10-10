@@ -6,6 +6,7 @@ import Column from '../Column/ColumnContainer.js';
 import {settings} from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 import Creator from '../Creator/Creator';
+import Container from '../Container/Container';
 
 class List extends React.Component {
 
@@ -29,11 +30,13 @@ class List extends React.Component {
         <div className={styles.description}>
           {ReactHtmlParser(description)}
         </div>
-        <div className={styles.columns}>
-          {columns.map(columnData => (
-            <Column key={columnData.id} {...columnData} />         
-          ))}
-        </div>
+        <Container>
+          <div className={styles.columns}>
+            {columns.map(columnData => (
+              <Column key={columnData.id} {...columnData} />         
+            ))}
+          </div>
+        </Container>
         <div className={styles.creator}>
           <Creator text={settings.columnCreatorText} action={addColumn}/>
         </div>
