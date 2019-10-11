@@ -16,9 +16,7 @@ class Home extends React.Component {
 
   render() {
     const {title, subtitle, lists, moveCard} = this.props;
-    {console.log('title: ', title, ' subtitel: ', subtitle, ' lists: ', lists);}
     const moveCardHandler = result => {
-      console.log('result to: ', result);
       if(
         result.destination && (result.destination.index != result.source.index
         || 
