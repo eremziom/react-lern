@@ -1,13 +1,11 @@
 import React from 'react';
-import styles from './Column.scss';
+import styles from './SearchResults.scss';
 import PropTypes from 'prop-types';
 import Card from '../Card/Card';
-import Creator from '../Creator/Creator';
 import {settings} from '../../data/dataStore';
 import Icon from '../Icon/Icon';
-//import {Droppable} from 'react-beautiful-dnd';
 
-class Column extends React.Component {
+class SearchResults extends React.Component {
   static propTypes = {
     cards: PropTypes.array,
     column: PropTypes.array,
@@ -22,7 +20,7 @@ class Column extends React.Component {
   }
 
   render(){
-    const {/*id*/ cards, addCard} = this.props;
+    const {cards} = this.props;
     console.log('cards to: ', cards);
     return (
       <section className={styles.component}>
@@ -33,24 +31,14 @@ class Column extends React.Component {
           {this.props.title}
         </h3>
         <div>
-          {/*<Droppable droppableId={id}>
-            {provided => (*/}
-          <div className={styles.cards}
-            //{...provided.droppableProps}
-            /*ref={provided.innerRef}*/>
+          <div className={styles.cards}>
             {cards.map(cardData => (
               <Card key={cardData.id} {...cardData} />         
             ))}
-            {/*{provided.placeholder}*/}
           </div>
-          {/*})}
-          </Droppable>*/}
-        </div>
-        <div>
-          <Creator text={settings.cardCreatorText} action={addCard}/>
         </div>
       </section>
     );
   }
 }
-export default Column;
+export default SearchResults;
