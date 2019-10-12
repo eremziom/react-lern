@@ -2,16 +2,12 @@ import {connect} from 'react-redux';
 import SearchResults from './SearchResults';
 import {
   getSearchString,
-  countVisibleCards,
-  countAllCards,
   createAction_changeSearchString,
-} from '../../../redux/searchStringRedux';
+} from '../../../redux/searchResultsReducer';
 import {getCardsForSearch} from '../../../redux/cardsReducer';
 
 const mapStateToProps = (state) => ({
   searchString: getSearchString(state),
-  countVisible: countVisibleCards(state),
-  countAll: countAllCards(state),
   cards: getCardsForSearch(state),
 });
 
